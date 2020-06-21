@@ -1,5 +1,5 @@
 ::selection {
-    background: rgba(118, 250, 255, 0.164);
+    background: rgba(240, 192, 50, 0.45);
     text-shadow: 0px 0px 2px;
 }
 
@@ -34,7 +34,14 @@
     padding: 10px 0px;
     border-radius: 7.5px;
     margin: auto;
+    cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.klasse-title:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(233, 188, 52);
 }
 
 .submit-button {
