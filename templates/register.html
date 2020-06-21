@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
+    
+    <!-- JavaScripts -->
+    <script type="text/javascript" href="{{ url_for('static', filename='js/primary.js') }}"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <title>Klasse | Register</title>
+    
+</head>
+
+<body style="font-family: 'Lato', sans-serif; color: white; text-align: center;">
+    <br><br><br><br>
+    <h1 class="klasse-title" style="text-align: center;">K L A S S E</h1>
+    <br><br>
+
+    <form class="needs-validation" novalidate action="{{ url_for('register') }}" method="post">
+        <div class="form-group">
+            <div style="text-align: left; padding: 0% 30%;">
+                <label for="validationCustom01"><b>Parent/Guardian's Name</b></label>
+                <input type="text" class="form-control" name="parent_name" id="validationCustom01" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid name.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div style="text-align: left; padding: 0% 30%;">
+                <label for="validationCustom02"><b>Child's Name</b></label>
+                <input type="text" class="form-control" name="child_name" id="validationCustom02" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid name.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div style="text-align: left; padding: 0% 30%;">
+                <label for="validationCustom03"><b>Child's Age</b></label>
+                <input type="number" class="form-control" name="child_age" id="validationCustom03" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid age.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div style="text-align: left; padding: 0% 30%;">
+                <label for="validationCustom04"><b>Email</b></label>
+                <input type="email" class="form-control" name="em" id="validationCustom04" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid email.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div style="padding: 0% 30%; text-align: left;">
+                <label for="validationCustom05"><b>Password</b></label>
+                <input type="password" class="form-control" name="pw" id="validationCustom05" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid password.
+                </div>
+            </div>
+            <br><br>
+            <button class="submit-button" type="submit"><a class="submit-link" style="color: white;">Register</a></button>
+        </div>
+    </form>
+    
+    <p style="text-align: center">
+        If you already have an account,
+        <a class="link" style="color: #f3e0f1;" href="/login">login here!</a>
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+::selection {
+    background: rgba(118, 250, 255, 0.164);
+    text-shadow: 0px 0px 2px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255, 255, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(241, 194, 50);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(223, 179, 47);
+}
+
+.klasse-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(241, 194, 50);
+    width: 300px;
+    padding: 10px 0px;
+    border-radius: 7.5px;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.submit-link {
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(125, 87, 255);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.submit-link:hover {
+    background-color: rgb(118, 81, 240);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
