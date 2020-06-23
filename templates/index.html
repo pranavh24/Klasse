@@ -13,19 +13,74 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
 
 	<!-- JavaScripts -->
-	<script type="text/javascript" href="{{ url_for('static', filename='js/primary.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/primary.js') }}"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/deef0bf4ed.js" crossorigin="anonymous"></script>
+
 	<title>Klasse</title>
 
 </head>
 
-<body style="font-family: 'Lato', sans-serif">
+<body style="font-family: 'Lato', sans-serif" onload="updateProgressBar()">
 
-	<h1>Hi {{ currentUser.get("childName") }}</h1>
+	<nav id="navbar">
+		<a class="klasse-title" href="/">K L A S S E</a>
+		<a class="navlink active" href="/">Dashboard</a>
+		<a class="navlink" href="/courses">Courses</a>
+		<a class="navlink" href="/help">Help</a>
+		<a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
+	</nav>
+
+	<div style="padding-left: 30px; padding-top: 30px;">
+		<h1 class="title">My Dashboard</h1>
+		<br><br>
+
+		<div style="padding-left: 20px;">
+			<h1 class="subtitle" style="padding-left: 30px;">Level: <span style="font-weight: 400;">Beginner</span></h1>
+			<div id="progress-bar">
+				<div id="progress">
+					<h1 id="progress-text">Current Progress: 65/100XP</h1>
+				</div>
+				<img id="trophy" src="/trophy.png" alt="profile">
+			</div>
+		</div>
+		
+		<br><br>
+
+		<div style="padding-left: 20px;">
+			<h1 class="subtitle" style="padding-left: 30px;">Achievements:</h1>
+			<br>
+			<div id="achievements">
+				<div class="achievement unlocked">
+					<i class="fa fa-leaf" aria-hidden="true"></i>
+				</div>
+				<div class="achievement unlocked">
+					<i class="fa fa-laptop-code" aria-hidden="true" style="padding-left: -20px;"></i>
+				</div>
+				<div class="achievement unlocked">
+					<i class="fa fa-book-open" aria-hidden="true"></i>
+				</div>
+				<div class="achievement locked">
+					<i class="fa fa-superscript" aria-hidden="true"></i>
+				</div>
+				<div class="achievement locked">
+					<i class="fa fa-star" aria-hidden="true"></i>
+				</div>
+				<div class="achievement locked">
+					<i class="fa fa-atlas" aria-hidden="true"></i>
+				</div>
+				<div class="achievement locked">
+					<i class="fa fa-bullseye" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 </body>
 

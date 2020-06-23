@@ -1,10 +1,3 @@
-body {
-    background-image: url('../images/Klasse_Background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 ::selection {
     background: rgba(240, 192, 50, 0.45);
     text-shadow: 0px 0px 2px;
@@ -38,8 +31,7 @@ body {
     font-weight: 700;
     color: white;
     background-color: rgb(241, 194, 50);
-    width: 325px;
-    padding: 10px 0px;
+    padding: 5px 20px;
     border-radius: 7.5px;
     margin: auto;
     cursor: pointer;
@@ -50,6 +42,46 @@ body {
 .klasse-title:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(233, 188, 52);
+    text-decoration: none;
+    color: white;
+}
+
+.navlink {
+    background-color: rgb(180, 167, 214);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+    transition: all 0.3s;
+}
+
+.navlink:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(169, 155, 202);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active {
+    background-color: rgb(213, 166, 189);
+}
+
+.active:hover {
+    background-color: rgb(204, 149, 176);
+}
+
+.profile {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.profile:hover {
+    filter: brightness(92.5%);
 }
 
 label {
@@ -80,4 +112,18 @@ label {
 .submit-link:hover {
     background-color: rgb(118, 81, 240);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: rgb(102, 102, 102);
+}
+
+.subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: rgb(102, 102, 102);
 }

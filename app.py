@@ -64,10 +64,11 @@ def register():
         # Get register form data
         
         newUser = {
-            "name": request.form["nm"],
-            "phone_num": request.form["ph"],
             "email": request.form["em"],
-            "password": request.form["pw"]
+            "password": request.form["pw"],
+            "parentName": request.form["parent_name"],
+            "childName": request.form["child_name"],
+            "age": request.form["child_age"]
         }
 
         accountExists = False
@@ -96,6 +97,16 @@ def register():
 def logout():
     session.pop("currentUser", None)
     return redirect(url_for("index"), code=302)
+
+@app.route('/default_profile.png')
+def default_profile():
+    filename = 'default-profile.png'
+    return send_file(filename, mimetype='image/png')
+
+@app.route('/trophy.png')
+def trophy():
+    filename = 'trophy.png'
+    return send_file(filename, mimetype='image/png')
 
 @app.context_processor
 def context_processor():
