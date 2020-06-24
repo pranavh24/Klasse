@@ -108,6 +108,10 @@ def trophy():
     filename = 'trophy.png'
     return send_file(filename, mimetype='image/png')
 
+@app.route('/help')
+def help():
+    return render_template("help.html")
+
 @app.context_processor
 def context_processor():
     global users

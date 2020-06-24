@@ -1,0 +1,30 @@
+<nav id="navbar">
+    <a class="klasse-title" href="/">K L A S S E</a>
+    <a class="navlink active" href="/">Dashboard</a>
+    <a class="navlink" href="/courses">Courses</a>
+    <a class="navlink" href="/help">Help</a>
+    <a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
+</nav>
+
+<body style="font-family: 'Lato', sans-serif"></body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- CSS stylesheets -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
+        <!-- JavaScripts -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/primary.js') }}"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/deef0bf4ed.js" crossorigin="anonymous"></script>
+        <title>Klasse</title>
+    </head>
+</body>
+
+{% block content %}{% endblock %}
