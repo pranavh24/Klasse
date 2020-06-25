@@ -5,12 +5,6 @@ body {
     background-size: cover;
 }
 
-#navbar {
-    color: white;
-    background-color: rgb(166, 157, 240);
-    padding: 20px 0px 30px 20px;
-}
-
 #progress-bar {
     background-color: rgb(245, 245, 245);
     width: 1375px;

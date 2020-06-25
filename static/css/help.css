@@ -1,1 +1,38 @@
+.faq {
+    background: linear-gradient(90deg, rgb(176, 152, 231) 0%, rgba(125,87,255,1) 100%);
+    color: white;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 100px;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.4s;
+    cursor: pointer;
+}
 
+.faq:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.faq-arrow {
+    float: right;
+    width: 25px;
+    height: 25px;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+    border-color: white;
+    border-radius: 2.5px;
+    transform: rotate(-45deg);
+    transition: ease-in-out 0.2s;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 32px;
+}

@@ -16,3 +16,22 @@ function updateProgressBar() {
 function getPixelValue(property) {
     return parseInt(property.substring(0, property.indexOf("px")));
 }
+
+function expandFAQ(faq) {
+    var answer = faq.getElementsByTagName("P")[0];
+    var arrow = faq.getElementsByClassName("faq-arrow")[0];
+    
+    if(answer.style.display === "block") {
+        
+        arrow.style.transform = "rotate(-45deg)";
+        answer.style.display = "none";
+        faq.style.height = "auto";
+        
+    } else {
+        setTimeout(function(){
+            arrow.style.transform = "rotate(45deg)";
+            answer.style.display = "block";
+            faq.style.height = "auto";
+        }, 100);
+    }
+}
