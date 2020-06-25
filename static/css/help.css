@@ -1,3 +1,10 @@
+body {
+    background-image: url('../images/Klasse_Background2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .faq {
     background: linear-gradient(90deg, rgb(176, 152, 231) 0%, rgba(125,87,255,1) 100%);
     color: white;
