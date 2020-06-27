@@ -11,7 +11,14 @@ admin = {
     "password": "hello123",
     "parentName": "Jane Doe",
     "childName": "John Doe",
-    "age": 9
+    "age": 9,
+    "level": "Beginner",
+    "xp": 65,
+    "achievements": [
+        "Completed Biology 1 Course",
+        "Completed CS 1 Course",
+        "Completed Literature 1 Course",
+    ]
 }
 users.append(admin)
 
@@ -68,7 +75,10 @@ def register():
             "password": request.form["pw"],
             "parentName": request.form["parent_name"],
             "childName": request.form["child_name"],
-            "age": request.form["child_age"]
+            "age": request.form["child_age"],
+            "level": "Beginner",
+            "xp": 0,
+            "achievements": []
         }
 
         accountExists = False
