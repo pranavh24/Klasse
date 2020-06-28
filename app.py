@@ -122,6 +122,31 @@ def trophy():
 def help():
     return render_template("help.html")
 
+@app.route('/courses')
+def courses():
+    return render_template("courses.html")
+
+@app.route('/csimg.jpg')
+def csimg():
+    filename = 'csimg.jpg'
+    return send_file(filename, mimetype='image/png')
+
+@app.route('/bioimg.jpg')
+def bioimg():
+    filename = 'bioimg.jpg'
+    return send_file(filename, mimetype='image/png')
+
+@app.route('/mimg.jpg')
+def mimg():
+    filename = 'mimg.jpg'
+    return send_file(filename, mimetype='image/png')
+
+@app.route('/litimg.jpg')
+def litimg():
+    filename = 'litimg.jpg'
+    return send_file(filename, mimetype='image/png')
+
+
 @app.context_processor
 def context_processor():
     global users

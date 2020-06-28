@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- CSS stylesheets -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+		<!-- JavaScripts -->
+		<script type="text/javascript" src="{{ url_for('static', filename='js/primary.js') }}"></script>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<!-- Icons -->
+		<script src="https://kit.fontawesome.com/deef0bf4ed.js" crossorigin="anonymous"></script>
+		<title>Klasse</title>
+	</head>
+
+	<body style="font-family: 'Lato', sans-serif" onload="updateProgressBar()">
+		<nav id="navbar">
+			<a class="klasse-title" href="/">K L A S S E</a>
+			<a class="navlink" href="/">Dashboard</a>
+			<a class="navlink active" href="/courses">Courses</a>
+			<a class="navlink" href="/help">Help</a>
+			<a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
+		</nav>
+	</body>
+
+    <h1 class="courses-font"> My Courses <h1>
+	<br><br>
+	<div class="courses">
+		<img style="border-radius:20px;" src="csimg.jpg"/>
+		<span class="caption">Computer Science 1</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="bioimg.jpg"/>
+		<span class="caption">Biology 1</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="litimg.jpg"/>
+		<span class="caption">Literature 1</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="mimg.jpg"/>
+		<span class="caption">Mathematics 1</span>
+	</div>
+    <h1 class="courses-font"> Other Courses <h1> 
+	<br><br>
+	<div class="courses">
+		<img style="border-radius:20px;" src="csimg.jpg"/>
+		<span class="caption">Computer Science 2</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="bioimg.jpg"/>
+		<span class="caption">Biology 2</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="litimg.jpg"/>
+		<span class="caption">Literature 2</span>
+	</div>
+	<div class="courses">
+		<img style="border-radius:20px;" src="mimg.jpg"/>
+		<span class="caption">Mathematics 2</span>
+	</div>
+</html>

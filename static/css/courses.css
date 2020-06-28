@@ -1,0 +1,48 @@
+div.courses {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 40px; 
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: grey;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+.courses:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.courses-font {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: gray;
+    padding: 5px 20px;
+    border-radius: 7.5px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.5s;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
