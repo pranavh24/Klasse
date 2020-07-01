@@ -1,12 +1,18 @@
-div.courses {
-    vertical-align: top;
-    display: inline-block;
+body {
+    background-image: url('../images/Klasse_Background2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.course {
+    float: left;
     text-align: center;
     width: 300px;
     height: 200px;
     margin: auto;
     margin-bottom: 20px;
-    margin-left: 40px; 
+    margin-right: 40px; 
     margin-top: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -18,7 +24,6 @@ img {
     width: 300px;
     height: 200px;
     border-radius: 100px;
-    background-color: grey;
 }
 
 .caption {
@@ -27,7 +32,7 @@ img {
     display: block;
 }
 
-.courses:hover {
+.course:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     transform: scale(1.01);
 }

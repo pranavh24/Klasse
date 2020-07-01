@@ -20,121 +20,125 @@
 	</head>
 
 	<body style="font-family: 'Lato', sans-serif">
-		<nav id="navbar">
+		<div id="navbar">
 			<a class="klasse-title" href="/">K L A S S E</a>
 			<a class="navlink" href="/">Dashboard</a>
 			<a class="navlink" href="/courses">Courses</a>
 			<a class="navlink active" href="/help">Help</a>
-			<a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
-        </nav>
-        
-		<div style="padding-left: 30px; padding-top: 30px;">
-			<h1 class="title">Help</h1>
-            <br>
-            <div>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 1</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>
-                    <p class="faq-answer">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <br><br>
-                    </p>
-                </div>
-                <br>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 2</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>                 
-                    <p class="faq-answer">
-                        Answer 2
-                        <br><br>
-                    </p>
-                </div>
-                <br>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 3</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>
-                    <p class="faq-answer">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <br><br>
-                    </p>
-                </div>
-                <br>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 4</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>
-                    <p class="faq-answer">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <br><br>
-                    </p>
-                </div>
-                <br>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 5</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>
-                    <p class="faq-answer">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <br><br>
-                    </p>
-                </div>
-                <br>
-                <div class="faq" onclick="expandFAQ(this)">
-                    <h1 style="font-weight: 700;">Question 6</h1>
-                    <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
-                        <span></span>
-                    </div>
-                    <br>
-                    <p class="faq-answer">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <br><br>
-                    </p>
-                </div>
-            </div>
-            
+			<img class="profile" src="/default_profile.png" alt="profile" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)" onclick="window.open('/profile', '_self')">
 		</div>
+
+		<div class="dropdown-menu" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)">
+			<a href="/profile">Profile Settings</a>
+			<a href="/logout">Logout</a>
+		</div>
+
+		<div style="padding-left: 50px; padding-top: 30px;">
+            <h1 class="title">Help</h1>
+        </div>
+        <br>
+        <div>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 1</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>
+                <p class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 2</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>                 
+                <p class="faq-answer">
+                    Answer 2
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 3</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>
+                <p class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 4</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>
+                <p class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 5</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>
+                <p class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <div class="faq" onclick="expandFAQ(this)">
+                <h1 style="font-weight: 700;">Question 6</h1>
+                <div class="faq-arrow" style="margin-right: 30px; margin-top: -40px;">
+                    <span></span>
+                </div>
+                <br>
+                <p class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <br><br>
+                </p>
+            </div>
+        </div>
 	</body>
 </html>

@@ -13,11 +13,11 @@ admin = {
     "childName": "John Doe",
     "age": 9,
     "level": "Beginner",
-    "xp": 65,
+    "xp": 45,
     "achievements": [
         "Completed Biology 1 Course",
         "Completed CS 1 Course",
-        "Completed Literature 1 Course",
+        "Completed Literature 1 Course"
     ]
 }
 users.append(admin)

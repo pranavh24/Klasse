@@ -20,23 +20,29 @@
 	</head>
 
 	<body style="font-family: 'Lato', sans-serif" onload="updateProgressBar()">
-		<nav id="navbar">
+		<div id="navbar">
 			<a class="klasse-title" href="/">K L A S S E</a>
 			<a class="navlink active" href="/">Dashboard</a>
 			<a class="navlink" href="/courses">Courses</a>
 			<a class="navlink" href="/help">Help</a>
-			<a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
-		</nav>
+			<img class="profile" src="/default_profile.png" alt="profile" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)" onclick="window.open('/profile', '_self')">
+		</div>
+
+		<div class="dropdown-menu" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)">
+			<a href="/profile">Profile Settings</a>
+			<a href="/logout">Logout</a>
+		</div>
+
 		<div style="padding-left: 30px; padding-top: 30px;">
 			<h1 class="title">My Dashboard</h1>
 			<br><br>
 			<div style="padding-left: 20px;">
-				<h1 class="subtitle" style="padding-left: 30px;">Level: <span style="font-weight: 400;">Beginner</span></h1>
+				<h1 class="subtitle" style="padding-left: 30px;">Level: <span style="font-weight: 400;">{{ currentUser["level"] }}</span></h1>
 				<div id="progress-bar">
 					<div id="progress">
-						<h1 id="progress-text">Current Progress: 65/100XP</h1>
+						<h1 id="progress-text">Current Progress: {{ currentUser["xp"] }}/100XP</h1>
 					</div>
-					<img id="trophy" src="/trophy.png" alt="profile">
+					<img id="trophy" src="/trophy.png" alt="trophy">
 				</div>
 			</div>
 			<br><br>
@@ -44,27 +50,75 @@
 				<h1 class="subtitle" style="padding-left: 30px;">Achievements:</h1>
 				<br>
 				<div id="achievements">
-					<div class="achievement unlocked">
-						<i class="fa fa-leaf" aria-hidden="true"></i>
-					</div>
-					<div class="achievement unlocked">
-						<i class="fa fa-laptop-code" aria-hidden="true" style="padding-left: -20px;"></i>
-					</div>
-					<div class="achievement unlocked">
-						<i class="fa fa-book-open" aria-hidden="true"></i>
-					</div>
-					<div class="achievement locked">
-						<i class="fa fa-superscript" aria-hidden="true"></i>
-					</div>
-					<div class="achievement locked">
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</div>
-					<div class="achievement locked">
-						<i class="fa fa-atlas" aria-hidden="true"></i>
-					</div>
-					<div class="achievement locked">
-						<i class="fa fa-bullseye" aria-hidden="true"></i>
-					</div>
+					{% if "Completed Biology 1 Course" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Completed Biology 1 Course">
+							<i class="fa fa-leaf" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Completed Biology 1 Course">
+							<i class="fa fa-leaf" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Completed CS 1 Course" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Completed CS 1 Course">
+							<i class="fa fa-laptop-code" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Completed CS 1 Course">
+							<i class="fa fa-laptop-code" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Completed Literature 1 Course" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Completed Literature 1 Course">
+							<i class="fa fa-book-open" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Completed Literature 1 Course">
+							<i class="fa fa-book-open" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Completed Math 1 Course" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Completed Math 1 Course">
+							<i class="fa fa-superscript" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Completed Math 1 Course">
+							<i class="fa fa-superscript" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Completed All Courses" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Completed All Courses">
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Completed All Courses">
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Got All Questions Right" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Got All Questions Right">
+							<i class="fa fa-bullseye" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Got All Questions Right">
+							<i class="fa fa-bullseye" aria-hidden="true"></i>
+						</div>
+					{% endif %}
+
+					{% if "Referred to a Friend" in currentUser["achievements"] %}
+						<div class="achievement unlocked" title="Referred to a Friend">
+							<i class="fa fa-atlas" aria-hidden="true"></i>
+						</div>
+					{% else %}
+						<div class="achievement locked" title="Referred to a Friend">
+							<i class="fa fa-atlas" aria-hidden="true"></i>
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>

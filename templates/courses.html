@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<!-- CSS stylesheets -->
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
 		<!-- JavaScripts -->
 		<script type="text/javascript" src="{{ url_for('static', filename='js/primary.js') }}"></script>
@@ -20,50 +19,60 @@
 		<title>Klasse</title>
 	</head>
 
-	<body style="font-family: 'Lato', sans-serif" onload="updateProgressBar()">
-		<nav id="navbar">
+	<body style="font-family: 'Lato', sans-serif">
+		<div id="navbar">
 			<a class="klasse-title" href="/">K L A S S E</a>
 			<a class="navlink" href="/">Dashboard</a>
 			<a class="navlink active" href="/courses">Courses</a>
 			<a class="navlink" href="/help">Help</a>
-			<a href="/profile" style="float: right;"><img class="profile" src="/default_profile.png" alt="profile"></a>
-		</nav>
-	</body>
+			<img class="profile" src="/default_profile.png" alt="profile" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)" onclick="window.open('/profile', '_self')">
+		</div>
 
-    <h1 class="courses-font"> My Courses <h1>
-	<br><br>
-	<div class="courses">
-		<img style="border-radius:20px;" src="csimg.jpg"/>
-		<span class="caption">Computer Science 1</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="bioimg.jpg"/>
-		<span class="caption">Biology 1</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="litimg.jpg"/>
-		<span class="caption">Literature 1</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="mimg.jpg"/>
-		<span class="caption">Mathematics 1</span>
-	</div>
-    <h1 class="courses-font"> Other Courses <h1> 
-	<br><br>
-	<div class="courses">
-		<img style="border-radius:20px;" src="csimg.jpg"/>
-		<span class="caption">Computer Science 2</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="bioimg.jpg"/>
-		<span class="caption">Biology 2</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="litimg.jpg"/>
-		<span class="caption">Literature 2</span>
-	</div>
-	<div class="courses">
-		<img style="border-radius:20px;" src="mimg.jpg"/>
-		<span class="caption">Mathematics 2</span>
-	</div>
+		<div class="dropdown-menu" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)">
+			<a href="/profile">Profile Settings</a>
+			<a href="/logout">Logout</a>
+		</div>
+
+		<div style="padding-left: 50px; padding-top: 30px;">
+
+			<h1 class="title">My Courses<h1>
+			<div class="course">
+				<img style="border-radius:20px;" src="csimg.jpg"/>
+				<span class="caption">Computer Science 1</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="bioimg.jpg"/>
+				<span class="caption">Biology 1</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="litimg.jpg"/>
+				<span class="caption">Literature 1</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="mimg.jpg"/>
+				<span class="caption">Mathematics 1</span>
+			</div>
+
+			<br><br><br><br><br><br>
+
+			<h1 class="title">Other Courses<h1>
+			<div class="course">
+				<img style="border-radius:20px;" src="csimg.jpg"/>
+				<span class="caption">Computer Science 2</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="bioimg.jpg"/>
+				<span class="caption">Biology 2</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="litimg.jpg"/>
+				<span class="caption">Literature 2</span>
+			</div>
+			<div class="course">
+				<img style="border-radius:20px;" src="mimg.jpg"/>
+				<span class="caption">Mathematics 2</span>
+			</div>
+			<br><br><br><br><br><br>
+		</div>
+	</body>
 </html>
