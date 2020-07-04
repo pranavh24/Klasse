@@ -126,6 +126,10 @@ def help():
 def courses():
     return render_template("courses.html")
 
+@app.route('/cs')
+def cs():
+    return render_template("cs.html")
+
 @app.route('/csimg.jpg')
 def csimg():
     filename = 'csimg.jpg'
