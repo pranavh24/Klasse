@@ -1,0 +1,48 @@
+.video {
+    float: left;
+    text-align: center;
+    width: 1000px; 
+    height: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-right: 30px; 
+    margin-top: -1150px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.4s;
+    cursor: pointer;
+    float: right;
+}
+
+.section {
+    background: linear-gradient(90deg, rgb(176, 152, 231) 0%, rgba(125,87,255,1) 100%);
+    color: white;
+    height: auto;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    height: 100px;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.4s;
+    cursor: pointer;
+    float: down;
+}
+
+.topics {
+    color: black;
+    height: auto;
+    width: 400px;
+    margin-left: 30px;
+    height: 100px;
+    padding-top: 25px;
+    padding-right: 30px;
+    transition: all 0.4s;
+    cursor: pointer;
+    float: down;
+}
+

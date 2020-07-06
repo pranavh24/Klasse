@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- CSS stylesheets -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cs.css') }}">
+		<!-- JavaScripts -->
+		<script type="text/javascript" src="{{ url_for('static', filename='js/primary.js') }}"></script>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<!-- Icons -->
+		<script src="https://kit.fontawesome.com/deef0bf4ed.js" crossorigin="anonymous"></script>
+		<title>Klasse</title>
+    </head>
+
+    <body style="font-family: 'Lato', sans-serif">
+		<div id="navbar">
+			<a class="klasse-title" href="/">K L A S S E</a>
+			<a class="navlink" href="/">Dashboard</a>
+			<a class="navlink active" href="/courses">Courses</a>
+			<a class="navlink" href="/help">Help</a>
+			<img class="profile" src="/default_profile.png" alt="profile" onmouseover="dropdownHover(this, true)" onmouseout="dropdownHover(this, false)" onclick="window.open('/profile', '_self')">
+        </div>
+
+        <h1 class="topics" style="font-weight: 700;">Course Topics: </h1>
+
+        <div class="section">
+            <h1 style="font-weight: 700;">Course Overview</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">How do computers work?</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">What is KlasseKode?</h1>
+        </div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Coding Conventions</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Variables</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Conditionals</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Loops</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Lists</h1>
+		</div>
+		<div class="section">
+            <h1 style="font-weight: 700;">Using external libraries</h1>
+        </div>
+		
+		<iframe class="video" src="https://www.youtube.com/embed/BggrpKfqh1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+</html>
